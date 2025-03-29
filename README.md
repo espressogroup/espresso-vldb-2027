@@ -36,17 +36,6 @@ Here is a short GIF showing how the system works:
 </p>
 
 
-
-<!-- ## Experimental Setup
-
-Our experiments simulate a **decentralized federated health data network**, where patients' medical records are stored in **Personal Online Data Stores (Pods)** hosted on **Solid servers**. The experimental configuration includes:
-
-- **50 Solid servers**, each hosting **9,500 pods** (~475,000 pods in total).
-- **Synthetic healthcare dataset** generated using **Synthea**.
-- **Differential access control** assigned to search parties (ranging from 5% to 100% access levels).
-- **Search engine** implemented using **Apache Lucene**.
-- **Decentralized ranking mechanism** leveraging **BM25 and metadata-aware ranking**. -->
-
 ## Implementation Details
 
 - **Decentralized Indexing**: Each pod maintains **search-party-specific indexes**, ensuring visibility constraints are respected.
@@ -73,6 +62,16 @@ Our experiments simulate a **decentralized federated health data network**, wher
 - Community Solid Server (CSS) for decentralized data stores
 - IBM GainDB [https://github.com/gaiandb/gaiandb]
 - Python (optional) for metadata processing and Bloom filter evaluation
+
+## Experimental Setup
+
+Our experiments simulate a **decentralized federated health data network**, where patients' medical records are stored in **Personal Online Data Stores (Pods)** hosted on **Solid servers**. The experimental configuration includes:
+
+- **50 Solid servers**, each hosting **9,500 pods** (~475,000 pods in total).
+- **Synthetic healthcare dataset** generated using **Synthea**.
+- **Differential access control** assigned to search parties (ranging from 5% to 100% access levels).
+
+![ESPRESSO Architecture](Figs-Plots/figures/infrastructure.png)
 
 ### Citation
 If you use this code or dataset in your research, please cite our paper:
