@@ -35,6 +35,7 @@ Here is a short GIF showing how the system works:
   <img src="Figs-Plots/figures/Demo.gif"  alt="System Demonstration">
 </p>
 
+[![Watch the demo video](https://www.youtube.com/watch?v=C-oug2qgDp0&ab_channel=MohamedRagab)
 
 ## Implementation Details
 
@@ -87,7 +88,5 @@ If you use this code or dataset in your research, please cite our paper:
   doi       = {XX.XX/XXX.XX}
 }
 
-[Demo Video](Demo/VLDB-25-ESPRESSO-Demo-Video-final.mp4)
 
 
-<!-- [![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=C-oug2qgDp0&ab_channel=MohamedRagab) -->
