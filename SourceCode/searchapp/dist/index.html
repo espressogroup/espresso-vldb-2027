@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Espresso-Search</title>
+    <script defer src="./index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!--    <link rel="stylesheet" href="../static/css/normalize.min.css">-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!--<img class="logo" src="https://generic.wordpress.soton.ac.uk/espresso/wp-content/uploads/sites/445/2022/04/espresso-logo-large-text.png" alt="Espresso Search Logo"/>-->
+
+<!--<img class="center"  src="https://generic.wordpress.soton.ac.uk/espresso/wp-content/uploads/sites/445/2022/04/espresso-logo-large-text.png" alt="Espresso Search Logo"  width="212" height="100" />-->
+<!--<img class="center"  src="espresso-logo-animated.gif" alt="Espresso Search Logo"  width="212" height="100" />-->
+
+<aside class="sidebar">
+    <details>
+        <summary>View System Infrastructure</summary>
+        <img src="infrastructure.png" alt="System Architecture Diagram" class="system-diagram">
+    </details>
+</aside>
+
+<div class="flexbox">
+
+
+    <div class="search">
+<!--        <h1>Espresso Search...</h1>-->
+        <img class="logo" src="https://generic.wordpress.soton.ac.uk/espresso/wp-content/uploads/sites/445/2022/04/espresso-logo-large-text.png" alt="Espresso Search Logo"/>
+
+        <h3>Decentralized Web Search over Solid Pods.</h3>
+        <div>
+            <form id="searchForm" style="display: flex; flex-direction: column; gap: 10px;">
+                <div class="input-row1">
+                <input type="text" id="keyword" name="keyword" placeholder="Enter Keyword..." required>
+<!--                <input type="text" id="webID" name="webID" placeholder="Enter WebID..." required>-->
+<!--                    <input type="text" id="webIDInput" list="webIDOptions" placeholder="Enter WebID..." required>-->
+                    <div class="webid-wrapper">
+                        <input type="text" id="webIDInput" placeholder="Enter WebID..." autocomplete="off">
+                        <button type="button" id="settingsButton" class="settings-button">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        <input type="hidden" id="webID" name="webID">
+                        <div class="custom-dropdown" id="webIDDropdown">
+                            <div class="dropdown-item" data-value="httpexampleorgagent9profilecardme">
+                                WebID1--5% Access
+                            </div>
+                            <div class="dropdown-item" data-value="httpexampleorgsagent3profilecardme">
+                                WebID2--10% Access
+                            </div>
+                            <div class="dropdown-item" data-value="httpexampleorgsagent2profilecardme">
+                                WebID3--25% Access
+                            </div>
+                            <div class="dropdown-item" data-value="httpexampleorgsagent1profilecardme">
+                                WebID4--50% Access
+                            </div>
+                            <div class="dropdown-item" data-value="httpexampleorgsagent0profilecardme">
+                                WebID5--100% Access
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="advanced-options">
+                <div class="input-row2">
+                    <input type="number" id="topServers" name="topServers" placeholder="Top Servers" min="1">
+                    <input type="number" id="topPods" name="topPods" placeholder="Top Pods" min="1">
+                </div>
+
+                <!-- Replace the existing options-row div with this -->
+                <div class="options-row">
+                    <div class="rank-results">
+                        <label for="enableRanking">
+                            <input type="checkbox" id="enableRanking" name="enableRanking">
+                            <label id="rankResultsLabel">Re-rank Results</label>
+                        </label>
+                    </div>
+                    <div class="ranking-options-popup">
+                        <label class="ranking-option">
+                            <input type="radio" id="rankBM25" name="rankingModel" value="BM25">
+                            BM25
+                        </label>
+                        <label class="ranking-option">
+                            <input type="radio" id="rankLM" name="rankingModel" value="LM">
+                            LM
+                        </label>
+                        <label class="ranking-option">
+                            <input type="radio" id="rankCosineTFIDF" name="rankingModel" value="cosineTFIDF">
+                            TF-IDF Cosine
+                        </label>
+                        <label class="ranking-option">
+                            <input type="radio" id="rankEuclideanTFIDF" name="rankingModel" value="euclideanTFIDF">
+                            TF-IDF Euclidean
+                        </label>
+                    </div>
+
+                    <div class="source-selection">
+                        <label for="enableSources">
+                            <input type="checkbox" id="enableSources" name="enableSources" >
+                            Select Sources
+                        </label>
+                    </div>
+                </div>
+                </div>
+
+                <button type="searchbutton"  style="padding: 12px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s;">
+                    Search
+                </button>
+            </form>
+        </div>
+
+        <!-- Add this inside the search div -->
+        <div class="loading-spinner" style="display: none;">
+            <i class="fas fa-spinner fa-spin"></i>
+            <span>Searching...</span>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="results" style="display: none;">
+    <h1>Search Results</h1>
+    <button id="refineSearch" class="refine-button">
+        <i class="fas fa-filter"></i> Refine Search
+    </button>
+
+    <hr>
+    <ul>
+        <li class="result-card">
+            <div class="result-content">
+                <h3 class="result-title">Result Title</h3>
+                <p class="result-description">Brief description or excerpt from the result goes here...</p>
+                <a href="#" class="result-link">View More</a>
+            </div>
+        </li>
+    </ul>
+
+    <div id="pagination" class="pagination-container"></div>
+
+
+
+</div>
+
+<!--<div id="searchStats" class="stats-line" style="display: none;">-->
+<!--    <i class="fas fa-chart-bar stats-icon"></i>-->
+<!--    <div class="stats-content">-->
+<!--        <div class="stat-item">-->
+<!--            <i class="fas fa-file-alt stat-icon"></i>-->
+<!--            ESPRESSO retrieved <span class="highlight" id="statDocuments"></span>/475K docs-->
+<!--        </div>-->
+<!--        <div class="stat-item">-->
+<!--            <i class="fas fa-server stat-icon"></i>-->
+<!--            Navigated <span class="highlight" id="statServers"></span>/50 servers-->
+<!--        </div>-->
+<!--        <div class="stat-item">-->
+<!--            <i class="fas fa-cube stat-icon"></i>-->
+<!--            Selected <span class="highlight" id="statPods"></span>/475K pods-->
+<!--        </div>-->
+<!--        <div class="stat-item">-->
+<!--            <i class="fas fa-clock stat-icon"></i>-->
+<!--            Brewed in <span class="highlight" id="statTime"></span>sec-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<div id="searchStats" class="stats-line" style="display: none;">
+    <i class="fas fa-chart-bar stats-icon"></i>
+    <div class="stats-content">
+        <div class="stat-row">
+            <div class="stat-item">
+                <i class="fas fa-file-alt stat-icon"></i>
+                Retrieved <span class="highlight" id="statDocuments"></span>/475K Docs
+            </div>
+
+
+            <div class="stat-item">
+                <i class="fas fa-server stat-icon"></i>
+                Navigated <span class="highlight" id="statServers"></span>/50 Servers
+            </div>
+        </div>
+        <div class="stat-row">
+
+            <div class="stat-item">
+                <i class="fas fa-clock stat-icon"></i>
+                Brewed in <span class="highlight" id="statTime"></span> sec.
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-cube stat-icon"></i>
+                Selected <span class="highlight" id="statPods"></span>/475K Pods
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Add before footer -->
+<div id="selectionModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Select Resources for Search</h2>
+        <div id="serverList" class="server-container"></div>
+        <button id="confirmSearch" class="search-button">
+            <i class="fas fa-search"></i> Search Selected
+        </button>
+    </div>
+</div>
+
+<!-- Footer section -->
+<footer>
+    <div class="footer-content">
+        <img src="https://generic.wordpress.soton.ac.uk/espresso/wp-content/uploads/sites/445/2022/04/espresso-logo-large-text.png" alt="Company Logo" class="footer-logo" width="100">
+    </div>
+</footer>
+
+</body>
+</html>
