@@ -9,7 +9,7 @@ This repository contains the source code, data, and supplementary materials for 
 - **Decentralized ranking techniques** to optimize search results.
 - **Experimental evaluation** in a healthcare-inspired decentralized personal data setting.
 
-## Key Contributions
+## Key Contributions:
 
 - **Decentralized Search Framework**: We design a privacy-aware, decentralized keyword search mechanism using metadata-driven query processing.
 - **Differential Access Control**: The system ensures that search results respect access permissions set by data store owners.
