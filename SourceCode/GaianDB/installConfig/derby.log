@@ -1,20 +1,18 @@
 ----------------------------------------------------------------
-Tue Jan 30 21:11:01 GMT 2024:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-018d-5c36-0650-00001c1cf1a0 
-on database directory /Users/ragab/EspressoProjRagabTests/GaianDB_Keyword_Search_SourceCode/installConfig/gaiandb with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
-Loaded from file:/Users/ragab/.m2/repository/org/apache/derby/derby/10.10.1.1/derby-10.10.1.1.jar
+Wed May 14 12:41:23 BST 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0196-ce99-6e46-00001479bf68 
+on database directory /Users/mohamed.ragab/vldb-2025/SourceCode/GaianDB/installConfig/gaiandb with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/Users/mohamed.ragab/.m2/repository/org/apache/derby/derby/10.10.1.1/derby-10.10.1.1.jar
 java.vendor=Amazon.com Inc.
-java.runtime.version=1.8.0_312-b07
-user.dir=/Users/ragab/EspressoProjRagabTests/GaianDB_Keyword_Search_SourceCode/installConfig
+java.runtime.version=1.8.0_452-b09
+user.dir=/Users/mohamed.ragab/vldb-2025/SourceCode/GaianDB/installConfig
 os.name=Mac OS X
-os.arch=x86_64
-os.version=14.2.1
+os.arch=aarch64
+os.version=15.4.1
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
-Tue Jan 30 21:11:02 GMT 2024 : Apache Derby Network Server - 10.10.1.1 - (1458268) started and ready to accept connections on port 6414
-Tue Jan 30 21:11:08 GMT 2024 : Log Connections turned on.
-Tue Jan 30 21:11:08 GMT 2024 : Connection number: 7.
-Tue Jan 30 21:11:08 GMT 2024 : Max threads changed to 1000.
-Tue Jan 30 21:11:08 GMT 2024 : Connection number: 8.
-Tue Jan 30 21:11:13 GMT 2024 : Connection number: 9.
-Tue Jan 30 21:11:13 GMT 2024 Thread[DRDAConnThread_3,5,derby.daemons] (DATABASE = gaiandb), (DRDAID = {9}), Apache Derby Network Server connected to database gaiandb;mode=null
+Wed May 14 12:41:24 BST 2025 : Apache Derby Network Server - 10.10.1.1 - (1458268) started and ready to accept connections on port 6414
+Wed May 14 12:41:34 BST 2025 : Log Connections turned on.
+Wed May 14 12:41:34 BST 2025 : Connection number: 7.
+Wed May 14 12:41:34 BST 2025 : Max threads changed to 1000.
+Wed May 14 12:41:34 BST 2025 : Connection number: 8.

@@ -2616,3 +2616,4 @@
 [Query ID: JFX4X76WVY:1706649221470:2]
 [2024-01-30 21:13:41.521, Total Execution Time: , 110]
 ------------------------------------------------------------------------
+[2025-05-14 12:40:48.557, Incoming Query:  SELECT gdbx_to_node local_node FROM new com.ibm.db2j.GaianTable('gdb_ltnull', 'explain') T WHERE gdbx_depth = 0]
