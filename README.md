@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the source code, data, and supplementary materials for our paper submitted to the **VLDB 2025 Conference**. Our work investigates scalable keyword search and querying in **decentralized data cooperatives** with differential data access. We focus on:
+This repository contains the source code, data, and supplementary materials for our paper submitted to the **VLDB 2027 Conference**. Our work investigates scalable keyword search and querying in **decentralized data cooperatives** with differential data access. We focus on:
 
 - **Decentralized indexing mechanisms** that respect differential visibility constraints.
 - **Metadata-driven source selection** for query efficiency and privacy.
@@ -77,12 +77,12 @@ Our experiments simulate a **decentralized federated health data network**, wher
 ### Citation
 If you use this code or dataset in your research, please cite our paper:
 
-@article{ragab2025exploring,
+@article{ragab2027exploring,
   author    = {Mohamed Ragab and Helen Oliver and Mohammad Bahrani and Alexandra Poulovassilis and Thanassis Tiropanis and Adriane Chapman and George Roussos},
   title     = {Exploring the Performance of Scalable Keyword Search on Decentralized Data with Differential Visibility Constraints},
   journal   = {PVLDB},
-  year      = {2025},
-  volume    = {14},
+  year      = {2027},
+  volume    = {16},
   number    = {1},
   pages     = {XX-XX},
   doi       = {XX.XX/XXX.XX}
