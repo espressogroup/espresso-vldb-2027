@@ -1,8 +1,8 @@
-# Exploring the Performance of Scalable Keyword Search on Decentralized Data with Differential Visibility Constraints
+# Scalable Privacy-Preserving Keyword Search on Decentralized Data with Granular Data Visibility Constraints
 
 ## Overview
 
-This repository contains the source code, data, and supplementary materials for our paper submitted to the **VLDB 2027 Conference**. Our work investigates scalable keyword search and querying in **decentralized data cooperatives** with differential data access. We focus on:
+This repository contains the source code, data, and supplementary materials for our paper submitted to the **VLDB 2027 Conference**. Our work investigates scalable keyword search and querying in **decentralized data ecosystems** with differential data access. We focus on:
 
 - **Decentralized indexing mechanisms** that respect differential visibility constraints.
 - **Metadata-driven source selection** for query efficiency and privacy.
@@ -26,16 +26,6 @@ The architecture of our ESPRESSO framework consists of four main components:
 
 ![ESPRESSO Architecture](Figs-Plots/figures/ESPRESSOArchRepo.png)
 
-
-## System Demo
-
-Here is a short GIF showing how the system works:
-
-<p align="center">
-  <img src="Figs-Plots/figures/Demo.gif"  alt="System Demonstration">
-</p>
-
-[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=C-oug2qgDp0&ab_channel=MohamedRagab)
 
 ## Implementation Details
 
@@ -77,7 +67,7 @@ Our experiments simulate a **decentralized federated health data network**, wher
 ### Citation
 If you use this code or dataset in your research, please cite our paper:
 
-@article{ragab2027exploring,
+@article{ragabvldb2027,
   author    = {Mohamed Ragab and Helen Oliver and Mohammad Bahrani and Alexandra Poulovassilis and Thanassis Tiropanis and Adriane Chapman and George Roussos},
   title     = {Exploring the Performance of Scalable Keyword Search on Decentralized Data with Differential Visibility Constraints},
   journal   = {PVLDB},
